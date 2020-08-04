@@ -2,13 +2,10 @@ let transactions = [];
 let myChart;
 
 fetch("/api/transaction")
-  .then(response => {
-    return response.json();
-  })
+  .then(response => response.json())
   .then(data => {
     // save db data on global variable
     transactions = data;
-
     populateTotal();
     populateTable();
     populateChart();
@@ -121,9 +118,7 @@ function sendTransaction(isAdding) {
       "Content-Type": "application/json"
     }
   })
-  .then(response => {    
-    return response.json();
-  })
+  .then(response => response.json())
   .then(data => {
     if (data.errors) {
       errorEl.textContent = "Missing Information";
@@ -136,6 +131,7 @@ function sendTransaction(isAdding) {
   })
   .catch(err => {
     // fetch failed, so save in indexed db
+    console.log("[INDEX] Fetch errored, prepare to save to indexedDB.")
     saveRecord(transaction);
 
     // clear form
