@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css"
         integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css">
+    <!-- <link rel="stylesheet" href="style.css"> -->
     <link rel="icon" href="/favicon.ico" type="image/x-icon">
     <link rel="manifest" href="manifest.webmanifest" />
     <title>Budget Tracker</title>
@@ -22,9 +22,7 @@
 
         <header class="text-center m-4">
             <h1 class="display-1">Budget Tracker</h1>
-            <div class="total">
-                <div class="total lead">Your total is: $<span id="total">0</span></div>
-            </div>
+            <div class="lead">Your total is: <span class="h2">$<span id="total">0</span></span></div>
         </header>
 
         <form class="form row justify-content-center">
@@ -46,7 +44,7 @@
                         Subtract Funds
                     </button>
                 </div>
-                <div class="error invalid-feedback"></div>
+                <small class="error text-danger"></small>
             </div>
         </form>
         <div class="row justify-content-center">
@@ -64,9 +62,11 @@
                 </table>
             </div>
         </div>
-
-
-        <canvas id="myChart"></canvas>
+        <div class="row justify-content-center mb-4">
+            <div class="col col-xl-8">
+                <canvas id="myChart"></canvas>
+            </div>
+        </div>
     </div>
     <script>
         if ("serviceWorker" in navigator) {
