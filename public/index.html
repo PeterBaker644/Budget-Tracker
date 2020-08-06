@@ -9,37 +9,62 @@
     <link rel="shortcut icon" href="icons/icon-192x192.png" type="image/x-icon">
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css"
+        integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
     <link rel="icon" href="/favicon.ico" type="image/x-icon">
     <link rel="manifest" href="manifest.webmanifest" />
     <title>Budget Tracker</title>
 </head>
 
 <body>
-    <div class="wrapper">
-        <div class="total">
-            <div class="total">Your total is: $<span id="total">0</span></div>
+    <div class="container">
+
+        <header class="text-center m-4">
+            <h1 class="display-1">Budget Tracker</h1>
+            <div class="total">
+                <div class="total lead">Your total is: $<span id="total">0</span></div>
+            </div>
+        </header>
+
+        <form class="form row justify-content-center">
+            <div class="col col-xl-8">
+                <div class="input-group">
+                    <input class="form-control" type="text" id="t-name" placeholder="Name of transaction" />
+                    <input class="form-control" type="number" min="0" id="t-amount" placeholder="Transaction amount" />
+                    <button class="btn btn-outline-primary d-flex align-items-center pl-1" type="button" id="add-btn">
+                        <svg width="1.5em" height="1.5em" viewBox="0 0 16 16" class="bi bi-plus mr-1" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" d="M8 3.5a.5.5 0 0 1 .5.5v4a.5.5 0 0 1-.5.5H4a.5.5 0 0 1 0-1h3.5V4a.5.5 0 0 1 .5-.5z"/>
+                            <path fill-rule="evenodd" d="M7.5 8a.5.5 0 0 1 .5-.5h4a.5.5 0 0 1 0 1H8.5V12a.5.5 0 0 1-1 0V8z"/>
+                        </svg>
+                        Add Funds
+                    </button>
+                    <button class="btn btn-outline-primary d-flex align-items-center pl-1" type="button"  id="sub-btn">
+                        <svg width="1.5em" height="1.5em" viewBox="0 0 16 16" class="bi bi-dash mr-1" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" d="M3.5 8a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.5-.5z"/>
+                        </svg>
+                        Subtract Funds
+                    </button>
+                </div>
+                <div class="error invalid-feedback"></div>
+            </div>
+        </form>
+        <div class="row justify-content-center">
+            <div class="transactions m-4 col col-xl-8">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th scope="col">Transaction</th>
+                            <th scope="col">Amount</th>
+                        </tr>
+                    </thead>
+                    <tbody id="tbody">
+    
+                    </tbody>
+                </table>
+            </div>
         </div>
 
-        <div class="form">
-            <input type="text" id="t-name" placeholder="Name of transaction" />
-            <input type="number" min="0" id="t-amount" placeholder="Transaction amount" />
-            <button id="add-btn"><i class="fa fa-plus buttons"></i> Add Funds</button>
-            <button id="sub-btn"><i class="fa fa-minus"></i> Subtract Funds</button>
-            <p class="error"></p>
-        </div>
-
-        <div class="transactions">
-            <table>
-                <thead>
-                    <th>Transaction</th>
-                    <th>Amount</th>
-                </thead>
-                <tbody id="tbody">
-
-                </tbody>
-            </table>
-        </div>
 
         <canvas id="myChart"></canvas>
     </div>
@@ -53,8 +78,8 @@
         }
     </script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
-    <script src="/db.js"></script>
-    <script src="/index.js"></script>
+    <script src="/assets/js/db.js"></script>
+    <script src="/assets/js/index.js"></script>
 </body>
 
 </html>
