@@ -12,7 +12,7 @@ SO THAT my account balance is accurate when I am traveling
 
 ## Usage
 
-Follow the link to `https://whispering-sierra-27726.herokuapp.com/`.
+Follow the link to https://whispering-sierra-27726.herokuapp.com/.
 
 ## License
 
