@@ -24,4 +24,4 @@ Please note that this project is released with a Contributor Code of Conduct. By
 
 ## Screenshots
 
-![Screenshot of the App](https://raw.githubusercontent.com/PeterBaker644/Mixtape/master/screenshots/screenshot-1.png)
+![Screenshot of the App](https://raw.githubusercontent.com/PeterBaker644/Budget-Tracker/master/screenshots/screenshot-1.png)
