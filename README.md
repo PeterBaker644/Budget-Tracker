@@ -2,7 +2,7 @@
 
 [![Generic badge](https://img.shields.io/badge/license-MIT-green.svg)](https://shields.io/) [![Contributor Covenant](https://img.shields.io/badge/Contributor%20Covenant-v2.0%20adopted-ff69b4.svg)](https://www.contributor-covenant.org/version/2/0/code_of_conduct/code_of_conduct.md)
 
-Budget tracker is a simple web app that runs online and offline to allow the user to add transactions that are tracked in a MongoDB database.
+This budget tracker is a simple web app that runs online and offline to allow the user to add transactions that are tracked in a MongoDB database.
 
 ```
 AS AN avid traveller
